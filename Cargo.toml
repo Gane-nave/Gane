@@ -1,0 +1,124 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/aurora-core",
+    "crates/aurora-events",
+    "crates/aurora-gnss",
+    "crates/aurora-corrections",
+    "crates/aurora-sensors",
+    "crates/aurora-fusion",
+    "crates/aurora-integrity",
+    "crates/aurora-continuity",
+    "crates/aurora-telemetry",
+    "crates/aurora-api",
+    "crates/aurora-map",
+    "crates/aurora-routing",
+    "crates/aurora-lane",
+    "crates/aurora-offline",
+    "crates/aurora-risk",
+    "crates/aurora-confidence",
+    "crates/aurora-probabilistic",
+    "crates/aurora-evidence",
+    "crates/aurora-trust",
+    "crates/aurora-anti-manipulation",
+    "crates/aurora-traffic",
+    "crates/aurora-stability",
+    "crates/aurora-ux",
+    "crates/aurora-micro-nav",
+    "crates/aurora-parking",
+    "crates/aurora-charging",
+    "crates/aurora-fleet",
+    "crates/aurora-emergency",
+    "crates/aurora-resilience",
+    "crates/aurora-edge",
+    "crates/aurora-satellite",
+    "crates/aurora-city",
+    "crates/aurora-twin",
+    "crates/aurora-sdk",
+    "crates/aurora-developer",
+    "crates/aurora-marketplace",
+    "crates/aurora-payments",
+    "crates/aurora-vehicle",
+    "crates/aurora-config",
+    "crates/aurora-app",
+    "crates/aurora-integration-tests",
+    "crates/aurora-bench",
+    "crates/aurora-docs",
+    "crates/aurora-metrics",
+    "crates/aurora-observability",
+    "crates/aurora-deploy",
+    "crates/aurora-auth",
+    "crates/aurora-security",
+    "crates/aurora-monitoring",
+    "crates/aurora-emergency-sat",
+    "crates/aurora-immersive",
+    "crates/aurora-instruments",
+    "crates/aurora-temporal",
+    "crates/aurora-multimodal",
+    "crates/aurora-voice",
+    "crates/aurora-profile",
+    "crates/aurora-analytics",
+    "crates/aurora-ml",
+    "crates/aurora-gateway",
+    "crates/aurora-storage",
+    "crates/aurora-notifications",
+    "crates/aurora-compliance",
+    "crates/aurora-i18n",
+    "crates/aurora-a11y",
+    "crates/aurora-perf",
+    "crates/aurora-errors",
+    "crates/aurora-test-framework",
+    "crates/aurora-rollout",
+    "crates/aurora-wellness",
+    "crates/aurora-autonomous",
+    "crates/aurora-social",
+    "crates/aurora-simulation",
+    "crates/aurora-diagnostics",
+    "crates/aurora-e2e-tests",
+    "crates/aurora-plugins",
+    "crates/aurora-scheduler",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/amjad2161/aurora-nav"
+description = "AURORA NAV / GMIN — Global Mobility Intelligence Network"
+
+[workspace.dependencies]
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Logging / tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# HTTP / API
+axum = "0.7"
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# UUID
+uuid = { version = ">=1.11, <1.12", features = ["v4", "serde"] }
+
+# Math / Linear Algebra
+nalgebra = "0.33"
+
+# Error handling
+thiserror = "1"
+anyhow = "1"
+
+# Channel / concurrency
+crossbeam-channel = "0.5"
+parking_lot = "0.12"
+
+# Testing
+approx = "0.5"
