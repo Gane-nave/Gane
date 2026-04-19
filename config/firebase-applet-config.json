@@ -1,0 +1,9 @@
+{
+  "project": "gane-unified",
+  "features": {
+    "navigation": true,
+    "trade": true,
+    "designer": true,
+    "audit": true
+  }
+}

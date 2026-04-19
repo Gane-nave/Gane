@@ -1,0 +1,16 @@
+{
+  "collections": {
+    "users": {
+      "required": ["uid", "email", "role", "createdAt"]
+    },
+    "orders": {
+      "required": ["id", "userId", "status", "createdAt"]
+    },
+    "incidents": {
+      "required": ["id", "severity", "location", "createdAt"]
+    },
+    "auditLogs": {
+      "required": ["id", "actorId", "action", "timestamp"]
+    }
+  }
+}
