@@ -1,0 +1,13 @@
+# Build artifacts
+/target/
+**/target/
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Archive bloat prevention
+*.zip

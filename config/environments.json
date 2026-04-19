@@ -1,0 +1,14 @@
+{
+  "development": {
+    "logLevel": "debug",
+    "tracing": true
+  },
+  "staging": {
+    "logLevel": "info",
+    "tracing": true
+  },
+  "production": {
+    "logLevel": "warn",
+    "tracing": true
+  }
+}

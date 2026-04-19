@@ -1,0 +1,5 @@
+[project]
+name = "gane-config-tools"
+version = "0.1.0"
+description = "Validation tools for unified GANE configuration"
+requires-python = ">=3.10"
