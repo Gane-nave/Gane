@@ -10,8 +10,13 @@ FROM node:20-alpine AS frontend-builder
 WORKDIR /app/frontend
 COPY frontend/trade-app/package.json trade-app/
 COPY frontend/designer-app/package.json designer-app/
+COPY frontend/trade-app/tsconfig.json trade-app/
+COPY frontend/trade-app/src trade-app/src
+COPY frontend/designer-app/tsconfig.json designer-app/
+COPY frontend/designer-app/src designer-app/src
+COPY frontend/shared shared/
 RUN cd trade-app && npm install --no-package-lock --silent && npm run typecheck
-RUN cd /app/frontend/designer-app && npm install --no-package-lock --silent && npm run typecheck
+RUN cd designer-app && npm install --no-package-lock --silent && npm run typecheck
 
 FROM debian:bookworm-slim AS runtime
 WORKDIR /srv

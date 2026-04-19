@@ -1,4 +1,5 @@
 [workspace]
+# Resolver v2 keeps feature unification scoped per dependency graph for workspace crates.
 resolver = "2"
 members = ["crates/aurora-nav-core"]
 
